@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: #f5f5f5;
+  font-family: 'Roboto Flex', sans-serif;
+  color: #1a1a1a;
+}
+
+.container {
+  padding: 0 110px;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 110px;
+  background: #fff;
+}
+
+.nav {
+  display: flex;
+  flex: 1;                /* щоб зайняло всю ширину */
+  justify-content: center; /* вирівнюємо по центру */
+  align-items: center;
+  gap: 60px;              /* відстань між меню і іконками */
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+}
+
+.menu__links {
+  display: flex;
+  gap: 69px;
+  justify-content: center; /* лінки по центру */
+  flex: 1;
+}
+
+.menu__links a {
+  text-decoration: none;
+  color: #044D8C;
+  font-weight: 500;
+}
+
+.menu__links a:hover {
+  color: #0b5ed7;
+}
+
+.menu__icons {
+  display: flex;
+  gap: 20px;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  padding: 60px 0;
+}
+
+.hero__left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.hero__search {
+  display: flex;
+}
+
+.hero__search input {
+  padding: 16px;
+  width: 431px;
+  height: 69px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+}
+
+.hero__search button {
+  padding: 16px 24px;
+  background: #044D8C;
+  color: #fff;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.hero__search button:hover {
+  background: #033b6a;
+}
+
+.hero__title {
+  font-size: 42px; /* менший розмір */
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.2px;
+  color: #044D8C;
+  max-width: 400px;
+}
+
+.hero__right img {
+  width: 475px;
+  height: 298.02px;
+  top: 216px;
+  left: 737px;
+}
+
+
+/* ACTIONS CENTER */
+.hero__actions_center {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  margin: 40px 0;
+}
+
+.action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.action img {
+  width: 84px;
+  height: 115px;
+  margin-bottom: 10px;
+}
+
+.action p {
+  font-weight: 500;
+  color: #044D8C;
+}
+
+/* INFO */
+.info {
+  margin: 80px 0;
+}
+
+.info h3 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: #000;
+}
+
+.info__cards {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.card {
+  background: #fff;
+  padding: 30px;
+  width: 395px;
+  height: 237px;
+  top: 65px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h4 {
+  margin-bottom: 10px;
+  color: #044D8C;
+}
+
+.card p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.card button {
+  width: 171px;
+  height: 49px;
+  top: 212px;
+  left: 36px;
+  padding: 12px;
+  border: 2px solid #044D8C;
+  background: transparent;
+  color: #044D8C;
+  border-radius: 29px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.card button:hover {
+  background: #044D8C;
+  color: #fff;
+}
+
+/* FOOTER */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 110px;
+  background: #044D8C;
+  color: #fff;
+}
+
+.footer h4 {
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #F2BE22; /* золотистий */
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer li {
+  margin-bottom: 8px;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.follow {
+  margin-top: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #F2BE22;
+}
+
+.social {
+  display: flex;
+  gap: 15px;
+  margin-top: 12px;
+}
+
+.social img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.social img:hover {
+  transform: scale(1.1);
+}
+
+/* копірайт внизу */
+.footer-bottom {
+  text-align: center;
+  padding: 20px;
+  background: #033b6a;
+  color: #fff;
+  font-size: 14px;
+}
