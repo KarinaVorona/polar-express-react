@@ -1,11 +1,29 @@
+import { useEffect, useState } from 'react';
 import clsx from 'clsx';
+
+import Loader from '../components/Loader';
 
 import box from '../assets/box.svg';
 import price from '../assets/price.svg';
 import parcel from '../assets/parcel.svg';
 import store from '../assets/store.svg';
 
-function Main() {
+function Home() {
+  const [title] = useState('Choose your perfect delivery price');
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return <Loader />;
+  }
+
   return (
     <main className={clsx('main_container')}>
       <section className={clsx('hero', 'container')}>
@@ -16,9 +34,7 @@ function Main() {
           </div>
 
           <h2 className={clsx('hero__title')}>
-            Choose your perfect
-            <br />
-            delivery price
+            {title}
           </h2>
         </div>
 
@@ -47,35 +63,29 @@ function Main() {
         <div className={clsx('info__cards')}>
           <div className={clsx('card')}>
             <h4>Keep holiday surprises secure</h4>
-
             <p>
               The chilly weather is setting in here in the northern hemisphere,
               and as we get ready for the holidays many of us are gathering
               round a cheery fire.
             </p>
-
             <button>DISCOVER MORE</button>
           </div>
 
           <div className={clsx('card')}>
             <h4>Supporting small businesses</h4>
-
             <p>
               Our Small Business Hub provides you with information and insights
               needed to help you adapt and keep your business moving.
             </p>
-
             <button>GO TO SMALL BUSINESS HUB</button>
           </div>
 
           <div className={clsx('card')}>
             <h4>Latest news</h4>
-
             <p>
               Get the latest news, including articles on innovation,
               special announcements and more.
             </p>
-
             <button>GO TO NEWSROOM</button>
           </div>
         </div>
@@ -84,4 +94,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default Home;

@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import { Link } from 'react-router-dom';
 
 import logo from '../assets/logo.svg';
 import glass from '../assets/glass.svg';
@@ -9,14 +10,16 @@ function Header() {
   return (
     <header className={clsx('header', 'container')}>
       <h1>
-        <img src={logo} alt="Polar Express logo" />
+        <Link to="/">
+          <img src={logo} alt="Polar Express logo" />
+        </Link>
       </h1>
 
       <nav className={clsx('nav')}>
         <ul className={clsx('menu', 'menu__links')}>
-          <li><a href="#">Tracking</a></li>
-          <li><a href="#">Shipping</a></li>
-          <li><a href="#">Services</a></li>
+          <li><Link to="/tracking">Tracking</Link></li>
+          <li><Link to="/shipping">Shipping</Link></li>
+          <li><Link to="/services">Services</Link></li>
         </ul>
 
         <ul className={clsx('menu', 'menu__icons')}>

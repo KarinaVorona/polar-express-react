@@ -1,14 +1,27 @@
 import './App.css';
 
+import { Routes, Route } from 'react-router-dom';
+
 import Header from './components/Header';
-import Main from './components/Main';
 import Footer from './components/Footer';
+
+import Home from './pages/Home';
+import Tracking from './pages/Tracking';
+import Shipping from './pages/Shipping';
+import Services from './pages/Services';
 
 function App() {
   return (
     <>
       <Header />
-      <Main />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/tracking" element={<Tracking />} />
+        <Route path="/shipping" element={<Shipping />} />
+        <Route path="/services" element={<Services />} />
+      </Routes>
+
       <Footer />
     </>
   );
